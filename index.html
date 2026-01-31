@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>FBI | INSD ROSTER</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        body { 
+            background-color: #050505; color: #ffffff; font-family: 'Share Tech Mono', monospace; 
+            margin: 0; padding: 40px; display: flex; justify-content: center;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .roster-container {
+            width: 100%; max-width: 600px;
+            border: 1px solid #222; background: rgba(10, 10, 10, 0.95);
+            padding: 30px; box-shadow: 0 0 30px rgba(0,0,0,1);
+            position: relative; overflow: hidden;
+        }
+
+        .roster-container::before {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, #ff0000, transparent);
+            animation: scan 3s linear infinite;
+        }
+
+        @keyframes scan { 0% { left: -100%; } 100% { left: 100%; } }
+
+        .header { text-align: center; margin-bottom: 40px; border-bottom: 1px solid #222; padding-bottom: 20px; }
+        .header h1 { font-size: 24px; letter-spacing: 5px; margin: 10px 0; color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+        .header p { font-size: 10px; color: #555; letter-spacing: 2px; }
+
+        .section { margin-bottom: 30px; }
+        .section-title { font-size: 12px; color: #444; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; border-left: 2px solid #444; padding-left: 10px; }
+
+        .agent-card {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 20px; margin-bottom: 5px;
+            background: rgba(255,255,255,0.02); border: 1px solid #111;
+            transition: 0.3s;
+        }
+        .agent-card:hover { background: rgba(255,255,255,0.05); border-color: #333; transform: translateX(5px); }
+
+        .name { font-size: 16px; letter-spacing: 1px; color: #eee; }
+        .rank { font-size: 10px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
+
+        /* Цвета рангов */
+        .rank-head { background: rgba(255, 0, 0, 0.1); color: #ff4444; border: 1px solid #ff4444; }
+        .rank-deputy { background: rgba(255, 170, 0, 0.1); color: #ffaa00; border: 1px solid #ffaa00; }
+        .rank-agent { background: rgba(255, 255, 255, 0.05); color: #888; border: 1px solid #333; }
+
+        .footer { text-align: center; margin-top: 30px; font-size: 9px; color: #222; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+<div class="roster-container">
+    <div class="header">
+        <img src="https://i.imgur.com/CHk35BG.png" width="80" style="filter: grayscale(1); opacity: 0.5;">
+        <h1>INSD COMPOSITION</h1>
+        <p>FEDERAL BUREAU OF INVESTIGATION | TUCSON STATE</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Leadership</div>
+        <div class="agent-card">
+            <span class="name">Rui_Oba</span>
+            <span class="rank rank-head">HEAD OF INSD</span>
+        </div>
+        <div class="agent-card">
+            <span class="name">Alexandr_Prohora</span>
+            <span class="rank rank-deputy">DEPUTY HEAD</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Field Agents</div>
+        <div class="agent-card">
+            <span class="name">Daiki_Tanaka</span>
+            <span class="rank rank-agent">SPECIAL AGENT</span>
+        </div>
+        <div class="agent-card">
+            <span class="name">Imran_Nasiz</span>
+            <span class="rank rank-agent">SPECIAL AGENT</span>
+        </div>
+        <div class="agent-card">
+            <span class="name">Angel_Cripson</span>
+            <span class="rank rank-agent">SPECIAL AGENT</span>
+        </div>
+        <div class="agent-card">
+            <span class="name">Kenny_Sampov</span>
+            <span class="rank rank-agent">SPECIAL AGENT</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        PROPERTY OF THE OFFICE OF HRB | CLASSIFIED DATA
+    </div>
+</div>
+
+</body>
+</html>
